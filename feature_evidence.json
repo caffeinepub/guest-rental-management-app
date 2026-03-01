@@ -1,0 +1,24 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-frontend-color-theme-to-a-darker-visual-style-by-adjusting-the-css-custom-property-palette-in-frontend-src-index-css-darken-background-surface-card-and-sidebar-tokens-while-preserving-the-existing-warm-earthy-palette-direction-ensure-both-light-and-dark-theme-variants-are-consistently-updated-so-the-app-feels-noticeably-darker-overall",
+      "featureTitle": "Update the frontend color theme to a darker visual style by adjusting the CSS custom property palette in frontend/src/index.css. Darken background, surface, card, and sidebar tokens while preserving the existing warm earthy palette direction. Ensure both light and dark theme variants are consistently updated so the app feels noticeably darker overall.",
+      "files": [
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

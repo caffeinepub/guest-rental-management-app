@@ -1,0 +1,25 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Darken theme and update PIN code to 18/215",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update the frontend color theme to a darker visual style by adjusting CSS custom property palette in frontend/src/index.css while preserving the warm earthy palette identity",
+      "acceptanceCriteria": [
+        "The app background and surface areas are visibly darker than before",
+        "The warm earthy color palette identity is preserved",
+        "Both light and dark theme CSS tokens are updated consistently",
+        "Text remains readable with sufficient contrast against the darkened backgrounds",
+        "No white or very light backgrounds appear on main content areas"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Darken the CSS custom property palette for both light and dark themes. Reduce the lightness values in OKLCH color definitions for --background, --card, --popover, --muted, and --sidebar-* tokens to create noticeably darker surfaces. Keep the existing hue and chroma values to preserve the warm earthy palette direction. Ensure --foreground and text tokens maintain sufficient contrast against the darkened backgrounds for readability."
+        }
+      ]
+    }
+  ]
+}

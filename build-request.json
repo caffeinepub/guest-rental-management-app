@@ -1,0 +1,60 @@
+{
+  "kind": "build_request",
+  "title": "Darken theme and update PIN code to 18/215",
+  "projectName": "RentEase",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the frontend color theme to a darker visual style by adjusting the CSS custom property palette in frontend/src/index.css. Darken background, surface, card, and sidebar tokens while preserving the existing warm earthy palette direction. Ensure both light and dark theme variants are consistently updated so the app feels noticeably darker overall.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change the theme to a little dark colour"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app background and surface areas are visibly darker than before",
+        "The warm earthy color palette identity is preserved",
+        "Both light and dark theme CSS tokens are updated consistently",
+        "Text remains readable with sufficient contrast against the darkened backgrounds",
+        "No white or very light backgrounds appear on main content areas"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Change the owner PIN code from its current value to '18215' (digits 18/215). Update the backend Motoko actor in backend/main.mo so that PIN validation accepts '18215' as the correct owner PIN.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change the code to 18/215"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Entering '18215' on the OwnerPinPrompt successfully authenticates the owner",
+        "The previous PIN no longer grants access",
+        "The PIN validation logic in the backend actor is updated to the new value"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files listed in frontend.immutablePaths",
+    "Do not alter the data schema or existing backend query/mutation function signatures",
+    "Preserve the warm earthy palette identity — only darken the tones, do not replace the palette entirely"
+  ],
+  "nonGoals": [
+    "Adding new authentication mechanisms",
+    "Changing any layout, component structure, or feature functionality",
+    "Switching to a completely different color palette or design language"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
